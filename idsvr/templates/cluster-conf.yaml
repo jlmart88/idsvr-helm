@@ -51,9 +51,9 @@ metadata:
         {{- include "curity.labels" . | nindent 4 }}
   annotations:
     "helm.sh/hook": pre-install,pre-upgrade
-    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+    "helm.sh/hook-delete-policy": before-hook-creation
 spec:
-  ttlSecondsAfterFinished: 60
+  ttlSecondsAfterFinished: 3600
   template:
     spec:
       containers:
